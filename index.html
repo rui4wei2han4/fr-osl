@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FR 开源软件库</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            margin: 0;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px 0;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .download-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .download-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .download-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .download-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .download-meta {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 15px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .download-btn:hover {
+            background-color: #2980b9;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #7f8c8d;
+            font-size: 12px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .download-card {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>简洁下载站</h1>
+        <p>提供优质软件资源的下载平台</p>
+    </header>
+
+    <div class="download-container">
+        <div class="download-card">
+            <div class="download-title">文本编辑器 v2.5</div>
+            <div class="download-meta">大小: 4.7MB | 最近更新: 2023-05-20</div>
+            <button class="download-btn" onclick="downloadFile('text-editor.zip')">下载</button>
+        </div>
+
+        <div class="download-card">
+            <div class="download-title">图片浏览器 v1.2.3</div>
+            <div class="download-meta">大小: 8.2MB | 最近更新: 2023-05-15</div>
+            <button class="download-btn" onclick="downloadFile('image-viewer.zip')">下载</button>
+        </div>
+
+        <div class="download-card">
+            <div class="download-title">音乐播放器 v3.0</div>
+            <div class="download-meta">大小: 12.5MB | 最近更新: 2023-05-10</div>
+            <button class="download-btn" onclick="downloadFile('music-player.zip')">下载</button>
+        </div>
+
+        <div class="download-card">
+            <div class="download-title">视频编辑器 v4.2.1</div>
+            <div class="download-meta">大小: 32.8MB | 最近更新: 2023-05-05</div>
+            <button class="download-btn" onclick="downloadFile('video-editor.zip')">下载</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2023 简洁下载站 | 所有下载资源仅供学习和研究使用</p>
+    </footer>
+
+    <script>
+        function downloadFile(filename) {
+            alert('正在下载: ' + filename);
+            // 这里可以添加实际下载逻辑
+            // window.location.href = 'downloads/' + filename;
+        }
+    </script>
+</body>
+</html>
